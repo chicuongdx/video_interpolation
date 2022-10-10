@@ -42,8 +42,8 @@ def run_video(url=0):
             if ret==False:
                 break
 
-            #frame_LR = process_frame(frame, model, device)
-            frame_LR = frame
+            frame_LR = process_frame(frame, model, device)
+            #frame_LR = frame
             frame_LR = cv2.resize(frame_LR, dsize)
             out.write(frame_LR)
             print('frame in index: ' + str(idx) + ' ' + str(frame_LR.shape))
